@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c760dcd4-3f0b-4bae-9115-1982a01bcef6" name="Default Changelist" comment="" />
+    <list default="true" id="c760dcd4-3f0b-4bae-9115-1982a01bcef6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/js/Table.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/TaskAdd.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/TaskCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/table.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +43,9 @@
         <option value="package.json" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -126,6 +155,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1hrHsV9EEHUeJMcXvoPeAQej1N5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -155,14 +185,34 @@
       <updated>1600762498082</updated>
       <workItem from="1600762499116" duration="10788000" />
       <workItem from="1600773961622" duration="61000" />
-      <workItem from="1600774058527" duration="9727000" />
+      <workItem from="1600774058527" duration="10652000" />
+      <workItem from="1600841595038" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2609" y="342" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600860659847">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2609" y="342" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser/58.27.1862.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600860659847" />
+    <state x="2642" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600851981216">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2642" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/58.27.1862.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600851981216" />
     <state x="2595" y="259" width="617" height="568" key="NewPhpClassDialog" timestamp="1600762535439">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
