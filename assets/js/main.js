@@ -1,21 +1,6 @@
 import Vue from 'vue'
 import App from './Table.vue'
 
-Vue.prototype.$group = function group(array, key){
-    const result = {}
-    array.forEach(item => {
-        if (!result[item[key]]){
-            result[item[key]] = []
-        }
-        result[item[key]].push(item)
-    })
-    return result
-}
-
-Vue.prototype.$taskData = function taskData(id){
-    return document.querySelectorAll(`[data-id='${id}']`);
-}
-
 new Vue({
     el: '#table',
     components: {
@@ -23,3 +8,7 @@ new Vue({
     },
     render: h => h(App)
 });
+
+function test(col) {
+    console.log(col);
+}

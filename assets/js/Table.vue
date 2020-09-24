@@ -1,8 +1,10 @@
 <template>
   <div class="">
-    <button slot="footer" @click="addColumn('')" class="btn-dark">New column</button>
+<!--    <button slot="footer" @click="addColumn" class="btn-dark">New column</button>-->
+    <column-add
+      v-on:click="addColumn"
+    ></column-add>
     <div class="d-flex flex-row justify-content-center">
-
       <div
           v-for="column in columns"
           :key="column.title"
@@ -20,7 +22,7 @@
           ></task-card>
           <!-- </transition-group> -->
           <task-add
-              v-on:click="addTask(column.title, '', '')"
+              v-on:click="addTask"
               :column="column.title"
           ></task-add>
         </draggable>
@@ -31,7 +33,8 @@
 <script>
 import draggable from "vuedraggable";
 import TaskCard from "./TaskCard.vue";
-import TaskAdd from "./TaskAdd.vue"
+import TaskAdd from "./TaskAdd.vue";
+import ColumnAdd from "./ColumnAdd.vue";
 
 export default {
   name: "app",
@@ -39,6 +42,7 @@ export default {
   components: {
     TaskCard,
     TaskAdd,
+    ColumnAdd,
     draggable
   },
   data() {
@@ -50,17 +54,20 @@ export default {
             {
               id: 1,
               title: "Add discount code to checkout page",
+              description: "s",
               date: "Sep 14",
               type: "Feature Request"
             },
             {
               id: 2,
               title: "Provide documentation on integrations",
+              description: "",
               date: "Sep 12"
             },
             {
               id: 3,
               title: "Design shopping cart dropdown",
+              description: "",
               date: "Sep 9",
               type: "Design"
             }
@@ -72,18 +79,21 @@ export default {
             {
               id: 6,
               title: "Design shopping cart dropdown",
+              description: "",
               date: "Sep 9",
               type: "Design"
             },
             {
               id: 7,
               title: "Add discount code to checkout page",
+              description: "",
               date: "Sep 14",
               type: "Feature Request"
             },
             {
               id: 8,
               title: "Provide documentation on integrations",
+              description: "",
               date: "Sep 12",
               type: "Backend"
             }
@@ -95,17 +105,20 @@ export default {
             {
               id: 9,
               title: "Provide documentation on integrations",
+              description: "",
               date: "Sep 12"
             },
             {
               id: 10,
               title: "Design shopping cart dropdown",
+              description: "",
               date: "Sep 9",
               type: "Design"
             },
             {
               id: 11,
               title: "Add discount code to checkout page",
+              description: "",
               date: "Sep 14",
               type: "Feature Request"
             }
@@ -117,18 +130,21 @@ export default {
             {
               id: 14,
               title: "Add discount code to checkout page",
+              description: "",
               date: "Sep 14",
               type: "Feature Request"
             },
             {
               id: 15,
               title: "Design shopping cart dropdown",
+              description: "",
               date: "Sep 9",
               type: "Design"
             },
             {
               id: 16,
               title: "Add discount code to checkout page",
+              description: "",
               date: "Sep 14",
               type: "Feature Request"
             }
@@ -143,12 +159,14 @@ export default {
     },
     statusChange(event, col) {
       console.log(col, event);
+      //db call
     },
-    findColumns(){
-
-    },
-    addTask(status, name, tag){
-      console.log(status, name, tag)
+    addTask(data){
+      console.log(data);
+      status = data['column'];
+      let title = data['title'];
+      let tag = data['tag'];
+      let description = data['description'];
       let last_id = 1;
       let column = this.columns.find(columns => columns.title === status);
 
@@ -160,13 +178,14 @@ export default {
       last_id++;
       column.tasks.push({
         id: last_id,
-        title: "Add discount code to checkout page",
+        title: title,
+        description: description,
         date: "Sep 14",
-        type: "Feature Request"
+        type: tag
       })
     },
-    addColumn(name){
-      this.columns.push({title: "new", tasks: []})
+    addColumn(data){
+      this.columns.push({title: data['name'], tasks: []})
     }
   },
   computed: {

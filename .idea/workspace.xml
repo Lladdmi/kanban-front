@@ -19,14 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c760dcd4-3f0b-4bae-9115-1982a01bcef6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/Table.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/TaskAdd.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/TaskCard.vue" afterDir="false" />
+    <list default="true" id="c760dcd4-3f0b-4bae-9115-1982a01bcef6" name="Default Changelist" comment="commit">
+      <change afterPath="$PROJECT_DIR$/assets/js/ColumnAdd.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/TaskAdd.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/TaskAdd.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/TaskCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/TaskCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/table.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -188,6 +194,14 @@
       <workItem from="1600774058527" duration="10652000" />
       <workItem from="1600841595038" duration="8000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1600868510789</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600868510789</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +217,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2609" y="342" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600860659847">
@@ -221,6 +239,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2398" y="175" width="1022" height="737" key="SettingsEditor/58.27.1862.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600765747306" />
+    <state x="2504" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600868525243">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2504" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/58.27.1862.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600868525243" />
     <state x="2572" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1600770803659">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
