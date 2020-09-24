@@ -7,7 +7,7 @@ Vue.prototype.$lastId = function lastId(data){
     return Math.max.apply(null, list)
 }
 
-
+export const eventBus = new Vue();
 
 new Vue({
     el: '#table',

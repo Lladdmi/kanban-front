@@ -1,5 +1,4 @@
 <template>
-
   <div class="">
     <table-nav
       :project="this.project"
@@ -15,8 +14,10 @@
           :key="column.title"
           class="bg-gray-100 rounded-lg px-3 py-3 column-width rounded mr-4 "
       >
-        <p class="font-weight-bolder tracking-wide text-sm">{{ column.title }}</p>
-        <draggable :list="column.tasks" :animation="200" group="tasks" @change="statusChange($event, column.title)" class="overflow-auto">
+          <p class="font-weight-bolder tracking-wide text-sm">{{ column.title }}</p>
+
+
+        <draggable :list="column.tasks" :animation="200" group="tasks" v-on:change="statusChange($event, column.title)" class="overflow-auto">
           <task-card
               v-for="(task) in column.tasks"
               :key="task.id"
@@ -39,6 +40,7 @@ import TaskAdd from "./TaskAdd";
 import ColumnAdd from "./ColumnAdd";
 import TableNav from "./TableNav";
 import TaskEdit from "./TaskEdit";
+import {eventBus} from "./main";
 
 export default {
   name: "app",
@@ -193,9 +195,23 @@ export default {
     addColumn(data){
       this.columns.push({title: data['name'], tasks: []})
     },
-    deleteTask(data){
+    editTask(data){
       console.log(data)
+      //db query
+    },
+    deleteTask(data){
+      console.log(data['id'])
+      let id = data['id'];
+      //db query
     }
+  },
+  created() {
+    eventBus.$on('deleteTask', (data) =>{
+      this.deleteTask(data);
+    })
+    eventBus.$on('editTask', (data) => {
+      this.editTask(data);
+    })
   }
 }
 </script>

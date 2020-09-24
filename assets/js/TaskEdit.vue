@@ -29,8 +29,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Anuluj</button>
-            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" @click="editTask">Edytuj</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal" v-on:click="cancelForm" >Anuluj</button>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" v-on:click="editTask" >Edytuj</button>
           </div>
         </div>
       </div>
@@ -39,24 +39,30 @@
 </template>
 
 <script>
+import {eventBus} from "./main";
+
 export default{
   props: {
     task: {
       type: Object
     }
   },
-  data() {
-    return {
-      title: "",
-      tag: "",
-      description: ""
+  data(){
+    return{
+      new_title: ""
     }
   },
   methods: {
     editTask() {
-      let self = this;
-      this.$emit('click', { title : this.title, description : this.description, tag : this.tag})
+      console.log(this.new_title)
+      eventBus.$emit('editTask', { title : this.task.title, description : this.task.description, tag : this.task.type})
+    },
+    cancelForm(){
+      Object.assign(this.task, this.taskBeforeEdit)
     }
+  },
+  created() {
+    this.taskBeforeEdit = Object.assign({}, this.task)
   }
 }
 </script>

@@ -25,7 +25,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Anuluj</button>
-            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" @click="addColumn">Dodaj</button>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" v-on:click="addColumn">Dodaj</button>
           </div>
         </div>
       </div>

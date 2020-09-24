@@ -33,7 +33,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Anuluj</button>
-            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" @click="addTask">Dodaj</button>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" v-on:click="addTask">Dodaj</button>
           </div>
         </div>
       </div>

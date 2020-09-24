@@ -1,25 +1,22 @@
 <template>
-  <div class="card border-dark mb-3 small d-flex" style="max-width: 18rem; border-radius: 0px">
+  <div class="card border-dark mb-3 small d-flex" style="max-width: 18rem; border-radius: 0">
     <div class="p-0 card-header bg-light font-weight-bold d-flex">
       <div class="p-3">{{ task.title }}</div>
-<!--      <button type="button" class="pl-2 pr-2 ml-auto mt-0 border-0 bg-light dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--        <i class="fas fa-ellipsis-v"></i>-->
-<!--        <span class="sr-only">Toggle Dropdown</span>-->
-<!--      </button>-->
-          <task-edit
-              :task="this.task"
-          ></task-edit>
-      <div>
-        <button type="button" class="dropdown-item" v-model="task.id" v-on:click="deleteTask">Usuń</button>
-      </div>
-
-<!--          <ul class="dropdown-menu" role="menu">-->
-<!--            <li>-->
+      <button type="button" class="pl-2 pr-2 ml-auto mt-0 border-0 bg-light dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-ellipsis-v"></i>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <task-edit
+          :task="task"
+      ></task-edit>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <button type="button" class="dropdown-item" v-on:click="deleteTask(task.id)">Usuń</button>
 <!--              <task-edit-->
-<!--                  :id="task.id"-->
+<!--                  :task="task"-->
 <!--              ></task-edit>-->
-<!--            </li>-->
-<!--          </ul>-->
+            </li>
+          </ul>
 
     </div>
     <div class="card-body p-3">
@@ -36,6 +33,7 @@
 <script>
 
 import TaskEdit from "./TaskEdit";
+import {eventBus} from "./main";
 export default {
   components:{
       TaskEdit
@@ -46,15 +44,9 @@ export default {
       default: () => ({})
     }
   },
-  data() {
-    return {
-      id: ""
-    }
-  },
   methods: {
-    deleteTask() {
-      let id = this.id;
-      this.$emit('click', {id})
+    deleteTask(id) {
+      eventBus.$emit('deleteTask', {id})
     }
   }
 };
