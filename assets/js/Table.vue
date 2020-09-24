@@ -1,26 +1,28 @@
 <template>
+
   <div class="">
-<!--    <button slot="footer" @click="addColumn" class="btn-dark">New column</button>-->
-    <column-add
-      v-on:click="addColumn"
-    ></column-add>
+    <table-nav
+      :project="this.project"
+    ></table-nav>
+    <nav class="navbar navbar-light bg-light p-2 border">
+        <column-add
+            v-on:click="addColumn"
+        ></column-add>
+    </nav>
     <div class="d-flex flex-row justify-content-center">
       <div
           v-for="column in columns"
           :key="column.title"
           class="bg-gray-100 rounded-lg px-3 py-3 column-width rounded mr-4 "
       >
-        <p class="text-gray-700 font-semibold font-sans tracking-wide text-sm">{{ column.title }}</p>
-        <!-- Draggable component comes from vuedraggable. It provides drag & drop functionality -->
-        <draggable :list="column.tasks" :animation="200" ghost-class="ghost-card" group="tasks" @change="statusChange($event, column.title)">
-          <!-- Each element from here will be draggable and animated. Note :key is very important here to be unique both for draggable and animations to be smooth & consistent. -->
+        <p class="font-weight-bolder tracking-wide text-sm">{{ column.title }}</p>
+        <draggable :list="column.tasks" :animation="200" group="tasks" @change="statusChange($event, column.title)" class="overflow-auto">
           <task-card
               v-for="(task) in column.tasks"
               :key="task.id"
               :task="task"
               class="mt-3 cursor-move task"
           ></task-card>
-          <!-- </transition-group> -->
           <task-add
               v-on:click="addTask"
               :column="column.title"
@@ -32,9 +34,11 @@
 </template>
 <script>
 import draggable from "vuedraggable";
-import TaskCard from "./TaskCard.vue";
-import TaskAdd from "./TaskAdd.vue";
-import ColumnAdd from "./ColumnAdd.vue";
+import TaskCard from "./TaskCard";
+import TaskAdd from "./TaskAdd";
+import ColumnAdd from "./ColumnAdd";
+import TableNav from "./TableNav";
+import TaskEdit from "./TaskEdit";
 
 export default {
   name: "app",
@@ -43,10 +47,17 @@ export default {
     TaskCard,
     TaskAdd,
     ColumnAdd,
+    TableNav,
+    TaskEdit,
     draggable
   },
   data() {
     return {
+      project: [
+        {
+          name: "project_name"
+        }
+      ],
       columns: [
         {
           title: "Backlog",
@@ -163,18 +174,13 @@ export default {
     },
     addTask(data){
       console.log(data);
-      status = data['column'];
+      status = data.column;
       let title = data['title'];
       let tag = data['tag'];
       let description = data['description'];
-      let last_id = 1;
       let column = this.columns.find(columns => columns.title === status);
 
-      for (let task of this.columns) {
-        for (let item of task.tasks) {
-          last_id < item.id ? last_id = item.id : false
-        }
-      }
+      let last_id = this.$lastId(this.columns);
       last_id++;
       column.tasks.push({
         id: last_id,
@@ -186,11 +192,9 @@ export default {
     },
     addColumn(data){
       this.columns.push({title: data['name'], tasks: []})
-    }
-  },
-  computed: {
-    group() {
-      return this.$group(this.list, 'status')
+    },
+    deleteTask(data){
+      console.log(data)
     }
   }
 }

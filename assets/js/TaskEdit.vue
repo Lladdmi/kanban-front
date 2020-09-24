@@ -1,16 +1,13 @@
 <template><!-- Button trigger modal -->
   <div>
-    <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" v-bind:data-target="'#'+rmSpaces">
-      Dodaj
-    </button>
-
-    <div class="modal fade" v-bind:id="rmSpaces" tabindex="-1" role="dialog"
+    <button type="button" class="dropdown-item" data-toggle="modal" v-bind:data-target="'#id_'+task.id">Edytuj</button>
+    <div class="modal fade" v-bind:id="'id_'+task.id" tabindex="1" role="dialog"
          aria-labelledby="exampleModalCenterTitle"
          aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Dodaj zadanie do kolumny {{column}}</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Edytuj zadanie</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -19,21 +16,21 @@
             <form>
               <div class="form-group">
                 <label for="name">Nazwa</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" v-model="title">
+                <input type="text" class="form-control" id="name" aria-describedby="name" v-model="task.title">
               </div>
               <div class="form-group">
                 <label for="tag">Tag</label>
-                <input type="text" class="form-control" id="tag" v-model="tag">
+                <input type="text" class="form-control" id="tag" v-model="task.type">
               </div>
               <div class="form-group">
                 <label for="description">Opis</label>
-                <textarea id="description" class="form-control" v-model="description"></textarea>
+                <textarea id="description" class="form-control" v-model="task.description"></textarea>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Anuluj</button>
-            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" @click="addTask">Dodaj</button>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" @click="editTask">Edytuj</button>
           </div>
         </div>
       </div>
@@ -44,8 +41,8 @@
 <script>
 export default{
   props: {
-    column: {
-      type: String
+    task: {
+      type: Object
     }
   },
   data() {
@@ -56,14 +53,9 @@ export default{
     }
   },
   methods: {
-    addTask() {
+    editTask() {
       let self = this;
-      this.$emit('click', { column : this.column, title : this.title, description: this.description, tag: this.tag})
-    }
-  },
-  computed: {
-    rmSpaces(){
-      return this.column.replace(/\s/g, '');;
+      this.$emit('click', { title : this.title, description : this.description, tag : this.tag})
     }
   }
 }

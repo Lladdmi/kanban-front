@@ -1,7 +1,7 @@
 <template><!-- Button trigger modal -->
   <div>
-    <button type="button" class="btn-dark" data-toggle="modal" data-target="#add_column">
-      New Column
+    <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#add_column">
+      Dodaj nową kolumnę
     </button>
 
     <div class="modal fade" id="add_column" tabindex="-1" role="dialog"
@@ -24,8 +24,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn-secondary" data-dismiss="modal">Anuluj</button>
-            <button type="button" class="btn-primary" data-dismiss="modal" @click="addColumn">Dodaj</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Anuluj</button>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal" @click="addColumn">Dodaj</button>
           </div>
         </div>
       </div>
