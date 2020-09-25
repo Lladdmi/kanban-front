@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c760dcd4-3f0b-4bae-9115-1982a01bcef6" name="Default Changelist" comment="styling, edit, delete">
+    <list default="true" id="c760dcd4-3f0b-4bae-9115-1982a01bcef6" name="Default Changelist" comment="eventBus, fixed task editing">
+      <change afterPath="$PROJECT_DIR$/assets/js/TaskShow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ColumnAdd.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ColumnAdd.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Table.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/TaskAdd.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/TaskAdd.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/TaskCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/TaskCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/TaskEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/TaskEdit.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +192,7 @@
       <workItem from="1600773961622" duration="61000" />
       <workItem from="1600774058527" duration="10652000" />
       <workItem from="1600841595038" duration="8000" />
+      <workItem from="1601042635389" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1600868510789</created>
@@ -214,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600949845642</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="eventBus, fixed task editing">
+      <created>1600956850988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600956850988</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,12 +238,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="added modals" />
     <MESSAGE value="styling, edit, delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="styling, edit, delete" />
+    <MESSAGE value="eventBus, fixed task editing" />
+    <option name="LAST_COMMIT_MESSAGE" value="eventBus, fixed task editing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2609" y="342" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600860659847">

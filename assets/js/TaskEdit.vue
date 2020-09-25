@@ -1,6 +1,5 @@
 <template><!-- Button trigger modal -->
   <div>
-    <button type="button" class="dropdown-item" data-toggle="modal" v-bind:data-target="'#id_'+task.id">Edytuj</button>
     <div class="modal fade" v-bind:id="'id_'+task.id" tabindex="1" role="dialog"
          aria-labelledby="exampleModalCenterTitle"
          aria-hidden="true">
